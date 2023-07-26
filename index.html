@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Commerce</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+
+    <!-- tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/23b13db498.js" crossorigin="anonymous"></script>
+</head>
+
+
+<!-- Tailwind custom css -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+            }
+        }
+    }
+</script>
+
+<!-- css class -->
+<style>
+    .font-lato {
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
+<body class="font-lato">
+    <!-- Header-section -->
+    <header class="container mx-auto">
+        <!-- nav section -->
+        <nav class="mx-5">
+            <div class="my-8 shadow-xl rounded-2xl py-5 md:px-5 lg:px-5">
+                <div class="navbar bg-base-100 rounded-xl flex justify-between">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </label>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Home</a></li>
+                                <li><a>Product</a></li>
+                                <li><a>About Us</a></li>
+                                <li><a>Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-ghost normal-case text-xl"><img src="images/logo.png" alt=""></a>
+                    </div>
+
+                    <div class="navbar-center">
+                        <input type="text" placeholder="Search"
+                            class="input input-bordered rounded-full w-24 md:w-full lg:w-full max-w-xs" />
+                        <figure class="absolute m-16 md:ml-44 lg:ml-44">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </figure>
+                    </div>
+
+                    <div class="navbar-end hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Home</a></li>
+                            <li><a>Product</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner-section -->
+        <section class="mx-5">
+            <div class="carousel w-full rounded-2xl shadow-lg">
+                <!-- slide-1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="hero">
+                        <div class="hero-overlay bg-[#fceae8] py-72"></div>
+                        <div class="items-center text-center lg:text-start text-neutral-content">
+                            <div class="flex flex-col lg:flex-row gap-10">
+                                <div class="flex flex-col justify-center">
+                                    <h1 class="my-7 text-5xl font-extrabold text-black">Cool Dude Headphone</h1>
+                                    <p class="mb-5 text-black">This is the best headphone in the world for people who
+                                        just want to
+                                        waste time in
+                                        front of funky world.</p>
+                                    <h1 class="text-5xl font-extrabold text-pink-600 mb-5">$420</h1>
+
+                                    <div>
+                                        <button class="btn bg-pink-600 text-white w-32">Buy Now</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center">
+                                    <div class="w-96 mb-16 lg:mb-0">
+                                        <img class="w-full" src="images/headphone.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-transparent border-0">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-transparent border-0">❯</a>
+                    </div>
+                </div>
+
+                <!-- slide-2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="hero">
+                        <div class="hero-overlay bg-[#fceae8] py-72"></div>
+                        <div class="items-center text-center lg:text-start text-neutral-content">
+                            <div class="flex flex-col lg:flex-row gap-10">
+                                <div class="flex flex-col justify-center">
+                                    <h1 class="my-7 text-5xl font-extrabold text-black">X-Box for your living room</h1>
+                                    <p class="mb-5 text-black">This is the best headphone in the world for people who
+                                        just want to
+                                        waste time in
+                                        front of funky world.</p>
+                                    <h1 class="text-5xl font-extrabold text-pink-600 mb-5">$600</h1>
+
+                                    <div>
+                                        <button class="btn bg-pink-600 text-white w-32">Buy Now</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center">
+                                    <div class="w-96 mb-16 lg:mb-0">
+                                        <img class="w-full" src="images/xbox.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-transparent border-0">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-transparent border-0">❯</a>
+                    </div>
+                </div>
+
+
+                <!-- slide-3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="hero">
+                        <div class="hero-overlay bg-[#fceae8] py-72"></div>
+                        <div class="items-center text-center lg:text-start text-neutral-content">
+                            <div class="flex flex-col lg:flex-row gap-10">
+                                <div class="flex flex-col justify-center">
+                                    <h1 class="my-7 text-5xl font-extrabold text-black">Mega LCD TV For Sports</h1>
+                                    <p class="mb-5 text-black">This is the best headphone in the world for people who
+                                        just want to
+                                        waste time in
+                                        front of funky world.</p>
+                                    <h1 class="text-5xl font-extrabold text-pink-600 mb-5">$1200</h1>
+
+                                    <div>
+                                        <button class="btn bg-pink-600 text-white w-32">Buy Now</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-center">
+                                    <div class="w-96 mb-16 lg:mb-0">
+                                        <img class="w-full" src="images/tv.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-transparent border-0">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-transparent border-0">❯</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+
+    <!-- Main-section -->
+    <main class="container mx-auto">
+
+        <!-- Our Collections section -->
+        <section class="mx-5">
+            <div class="mt-24">
+                <div class="mb-5">
+                    <h1 class="text-4xl font-extrabold text-center my-2">Our Collections</h1>
+                    <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                        to
+                        additional content. <br> This
+                        card
+                        has even longer
+                        content than the first to show that equal height action.</p>
+                </div>
+
+                <!-- card-1 -->
+                <div class="flex flex-col lg:flex-row gap-10 mt-10">
+                    <div class="flex flex-1 bg-amber-500  rounded-2xl justify-center gap-8 py-4 shadow-2xl">
+                        <div class="flex items-center">
+                            <h1 class="text-white text-5xl font-extrabold ">Watch</h1>
+                        </div>
+                        <div class="w-32 flex items-center">
+                            <img src="images/watch.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="flex flex-1 bg-fuchsia-500  rounded-2xl justify-center gap-8 py-4 shadow-2xl">
+                        <div class="flex items-center">
+                            <h1 class="text-white text-5xl font-extrabold ">Bag</h1>
+                        </div>
+                        <div class="w-32 flex items-center">
+                            <img src="images/bag.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="flex flex-1 bg-indigo-700 rounded-2xl justify-center gap-8 py-4 shadow-2xl">
+                        <div class="flex items-center">
+                            <h1 class="text-white text-5xl font-extrabold ">Shoes</h1>
+                        </div>
+                        <div class="w-32 flex items-center">
+                            <img src="images/shoes.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shoes Collections section -->
+        <section class="mx-5">
+            <div class="mt-24">
+                <div class="mt-24">
+                    <div class="mb-5">
+                        <h1 class="text-4xl font-extrabold text-center my-2">Our Shoes Collections</h1>
+                        <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                            to
+                            additional content. <br> This
+                            card
+                            has even longer
+                            content than the first to show that equal height action.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+
+                    <!-- card-1 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Supply 350</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-2.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Nike 360</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$320</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Airmax</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$350</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-4 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Supply 350</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-5 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Airmax</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$350</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-6 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Supply 350</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-7 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-2.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Nike 360</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$320</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-8 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/shoe-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Airmax</h2>
+                            <p class="text-center">This is a longer card with supporting text below as a natural lead-in
+                                to additional.</p>
+                            <p class="text-center font-extrabold text-2xl">$350</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Backpack Collections section -->
+        <section class="mx-5">
+            <div class="mt-24">
+                <div class="mt-24">
+                    <div class="mb-5">
+                        <h1 class="text-4xl font-extrabold text-center my-2">Our Backpack Collections</h1>
+                        <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                            to
+                            additional content. <br> This
+                            card
+                            has even longer
+                            content than the first to show that equal height action.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+
+                    <!-- card-1 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Laltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-2.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Blue Niltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$320</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Black Kaltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$200</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card-4 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Laltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card-5 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Black Kaltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$200</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-6 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-1.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Red Laltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$120</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-7 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-2.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Blue Niltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$320</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-8 -->
+                    <div class="card bg-base-100 shadow-2xl">
+                        <figure>
+                            <img src="images/bag-3.png" alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-3xl font-extrabold text-center">Black Kaltu Bag</h2>
+                            <p class="text-center">This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="text-center font-extrabold text-2xl">$200</p>
+                            <div class="card-actions justify-center">
+                                <button class="btn bg-pink-600 text-white">Buy Now >> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="mt-24">
+        <div class="bg-black py-16">
+            <div class="footer p-10 text-base-content text-gray-400 container mx-auto flex flex-wrap justify-between">
+                <div>
+                    <span class="text-3xl font-extrabold my-4">Services</span>
+                    <a class="link link-hover">Branding</a>
+                    <a class="link link-hover">Design</a>
+                    <a class="link link-hover">Marketing</a>
+                    <a class="link link-hover">Advertisement</a>
+                </div>
+                <div>
+                    <span class="text-3xl font-extrabold my-4">Company</span>
+                    <a class="link link-hover">About us</a>
+                    <a class="link link-hover">Contact</a>
+                    <a class="link link-hover">Jobs</a>
+                    <a class="link link-hover">Press kit</a>
+                </div>
+                <div>
+                    <span class="text-3xl font-extrabold my-4">LET'S STAY IN TOUCH</span>
+                    <div class="form-control w-80">
+                        <label class="label">
+                            <span class="label-text text-gray-400 my-2">Get updates on sales, specials and more
+                            </span>
+                        </label>
+                        <div class="relative">
+                            <input type="text" placeholder="username@site.com"
+                                class="input input-bordered w-full pr-16" />
+                            <button class="btn bg-pink-600 text-white absolute top-0 right-0 rounded-2">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
